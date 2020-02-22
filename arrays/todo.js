@@ -2,14 +2,20 @@
 // You have X todos
 // Print first and second to last items -> Todo: walk the dog
 
-let todo = ['Finish JavaScript Course', 'Start Ruby on Rails Course', 'Apply for more internships', 'Diversify my portfolio', 'Fix mobile site for portfolio']
+const todo = ['Finish JavaScript Course', 'Start Ruby on Rails Course', 'Apply for more internships', 'Diversify my portfolio', 'Fix mobile site for portfolio']
+
+// Delete the 3rd item
+// Add a new item onto the end
+// Remove the first item from the list
+
+todo.splice(2, 1)
+todo.push('Howdy Yall')
+todo.shift()
+
 
 const printNumOfTodo = function() {
     return `You have ${todo.length} todos`
 }
 
-
 console.log(printNumOfTodo())
-// could have created a printTodoAtIndex() method to do the bottom two
-console.log('Todo: ' + todo[0])
-console.log('Todo: ' + todo[todo.length - 2])
+console.log(todo)
