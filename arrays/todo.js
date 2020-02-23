@@ -5,7 +5,7 @@ const todos = ['Finish JavaScript Course', 'Start Ruby on Rails Course', 'Apply 
 // }
 
 // todo.forEach(function(item, index) {
-//     console.log(`${index + 1}. ${item}`) 
+//    console.log(`${index + 1}. ${item}`) 
 // })
 
 // 1. Switch to array of objects -> text, completed (boolean)
@@ -39,5 +39,13 @@ const deleteTodo = function (todo, todoText) {
     }
 }
 
-deleteTodo(todo, '!Start Ruby on Rails Course')
-console.log(todo)
+const getThingsTodo = function(todo){
+    return todo.filter(function(todo){
+        return !todo.completed
+    })
+}
+
+console.log(getThingsTodo(todo))
+
+// deleteTodo(todo, '!Start Ruby on Rails Course')
+// console.log(todo)
