@@ -17,14 +17,14 @@ const printNumOfTodo = function() {
     return `You have ${todo.length} todos`
 }
 
-    /////////////////////////
-    // HIS IMPLEMENTATION //
-    ///////////////////////
+     //////////////////////////////////
+    //      HIS IMPLEMENTATION     //
+   /////////////////////////////////
 
-/* todo.forEach(function (item, index) {
-    const num = index + 1
-    console.log(`${num}. ${item}`)
-}) */
+    /* todo.forEach(function (item, index) {
+        const num = index + 1
+        console.log(`${num}. ${item}`)
+    }) */
 
 // My implementation; I would have wrapped in a function called printTodo though
 // Would make deleting something from the list with a method easier and decrimenting i
