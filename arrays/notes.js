@@ -1,4 +1,13 @@
-const notes = ['Note 1', 'Note 2', 'Note 3']
+const notes = [{}, {
+    title: 'Note 1',
+    body: 'This is a note',
+}, {
+    title: 'Note 2',
+    body: 'I like encapsulation'
+}, {
+    title: 'Note 3',
+    body: 'I need to go to the gym'
+}]
 
 // console.log(notes.pop())
 // notes.push('Note 4')
@@ -6,24 +15,19 @@ const notes = ['Note 1', 'Note 2', 'Note 3']
 // console.log(notes.shift())
 // notes.unshift('Note 0')
 
-notes.splice(1, 1, 'Note 2')
+// notes.splice(1, 1, 'Note 2')
 
-notes[2] = 'This is now the new note 3'
+// notes[2] = 'This is now the new note 3'
 
-notes.forEach(function(){
-    console.log('testing 123')
-})
+// notes.forEach(function(){
+//     console.log('testing 123')
+// })
 
 console.log(notes.length)
 console.log(notes)
 
-// Counting... 1
-for (let i = 0; i <= 2; i++) {
-    console.log(i)
-}
+const index = notes.findIndex(function(note, index) {
+    return note.title === 'Note 3'
+})
 
-// same as in Java
-for (let i = notes.length - 1; i >= 0; i--) {
-    console.log(notes[i])
-}
-
+console.log(index)
