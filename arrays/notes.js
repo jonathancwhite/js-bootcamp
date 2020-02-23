@@ -1,11 +1,11 @@
 const notes = [{
-    title: 'Note 1',
+    title: 'Sample Note',
     body: 'This is a note',
 }, {
-    title: 'Note 2',
+    title: 'Laziness',
     body: 'I like gym'
 }, {
-    title: 'Note 3',
+    title: 'Reminder',
     body: 'I need to go to the gym'
 }]
 
@@ -23,16 +23,22 @@ const findNotes = function(notes, query) {
     })
 }
 
+const sortNotes = function (notes){
+    notes.sort(function (a, b) {
+        if (a.title.toLowerCase() < b.title.toLowerCase()) {
+            return -1
+        } else if (b.title.toLowerCase() < a.title.toLowerCase()) {
+            return 1
+        }
+        return 0
+    })
+}
+
+sortNotes(notes)
+console.log(notes)
 
 
-console.log(findNotes(notes, '2'))
-
-// const findNote = function (notes, noteTitle) {
-//     const index = notes.findIndex(function(note, index) {
-//         return note.title.toLowerCase() === noteTitle.toLowerCase()
-//     })
-//     return notes[index]
-// }
+// console.log(findNotes(notes, '2'))
 
 // const note = findNote(notes, 'nnote 3')
 // console.log(note)

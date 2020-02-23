@@ -28,6 +28,16 @@ const todo = [{
     completed: false
 }]
 
+const sortTodo = function(todo) {
+    todo.sort(function(a, b) {
+        if (a.completed) {
+            return 1
+        } else if (!a.completed) {
+            return -1
+        }
+    })
+}
+
 let working = false;
 
 const deleteTodo = function (todo, todoText) {
@@ -45,7 +55,10 @@ const getThingsTodo = function(todo){
     })
 }
 
-console.log(getThingsTodo(todo))
+sortTodo(todo)
+console.log(todo)
+
+//console.log(getThingsTodo(todo))
 
 // deleteTodo(todo, '!Start Ruby on Rails Course')
 // console.log(todo)
