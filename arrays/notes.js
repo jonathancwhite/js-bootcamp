@@ -16,3 +16,14 @@ notes.forEach(function(){
 
 console.log(notes.length)
 console.log(notes)
+
+// Counting... 1
+for (let i = 0; i <= 2; i++) {
+    console.log(i)
+}
+
+// same as in Java
+for (let i = notes.length - 1; i >= 0; i--) {
+    console.log(notes[i])
+}
+
