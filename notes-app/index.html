@@ -11,11 +11,12 @@
    <input type="text" id="search-text" placeholder="Search">
    <div id="notes"></div>
 
-    <button id="create-note">Create Note</button>
-    <form id="name-form" action="#">
-        <input type="text" id="" name="firstName" placeholder="First Name">
-        <button>Submit</button>
-    </form>
+   <button id="create-note">Create Note</button>
+   <select id="filter-by">
+       <option value="byEdited">Sort by last edited</option>
+       <option value="byCreated">Sort by recently created</option>
+       <option value="alphabetical">Sort alphabetically</option>
+   </select>
    <script src="notes-app.js"></script>
 </body>
 </html>
