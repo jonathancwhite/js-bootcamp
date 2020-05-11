@@ -1,4 +1,7 @@
-const notes = getSavedNotes();
+let notes = getSavedNotes();
+const id = uuidv4();
+const titleElement = document.querySelector('a');
+const bodyElement = document.querySelector('#note-body');
 
 const filters = {
     searchText: ''
@@ -8,12 +11,12 @@ renderNotes(notes, filters);
 
 document.querySelector('#create-note').addEventListener('click', function(event) {
     notes.push({
-        id: uuidv4(),
+        id: id,
         title: '',
         body: ''
     })
     saveNotes(notes);
-    renderNotes(notes, filters);
+    location.assign(`edit.html#${id}`);
 })
 
 document.querySelector('#search-text').addEventListener('input', function(event) {
@@ -23,4 +26,11 @@ document.querySelector('#search-text').addEventListener('input', function(event)
 
 document.querySelector('#filter-by').addEventListener('change', function(e){
     console.log(e.target.value);
+})
+
+window.addEventListener('storage', function(e) {
+    if (e.key === 'notes') {
+        notes = JSON.parse(e.newValue)
+        renderNotes(notes, filters)
+    }
 })
